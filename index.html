@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+       <label id='modeSwitch'></label>
+    </header>
+
+
+    <h1 class="head">LOADING ANIMATION</h1>
+
+    <div class="collection">
+
+      <div id="t1" class="fortext">
+        <span class="close">&times;</span>
+        <h1>Add HTML</h1>
+        <textarea name="name"  rows="4" cols="50" readonly>
+<span class="ball i b0"></span>
+<span class="ball i b1"></span>
+<span class="ball i b2"></span>
+<span class="ball i b3"></span></textarea>
+         <h1>Add CSS</h1>
+<textarea name="name"  rows="25" cols="50" readonly>
+ball{
+height: 18px;
+width: 18px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+position: absolute;
+top: 16.5%;
+left: 12%;
+}
+  .b1{
+-webkit-animation: revolve 1.4s linear infinite;
+}
+  .b2{
+-webkit-animation: move 1.4s linear infinite;
+}
+.b3{
+transform: translateX(90px);
+}
+@-webkit-keyframes revolve {
+    0% { -webkit-transform: rotate(0deg) translateX(30px); }
+    100%   { -webkit-transform: rotate(360deg) translateX(60px); }
+}
+@-webkit-keyframes move{
+  0% { -webkit-transform: translateX(60px);}
+  100%{ -webkit-transform: translateX(30px);}
+}
+</textarea>
+      </div>
+
+
+
+
+      <div id="t2" class="fortext">
+        <span class="close">&times;</span>
+        <h1>Add HTML</h1>
+       <textarea name="name" rows="4" cols="50" readonly><span class="circle"></span></textarea>
+       <h1>Add CSS</h1>
+<textarea name="name"  rows="25" cols="50" readonly>.circle{
+border: 15px solid #414141;
+border-top: 15px solid #54e346;
+border-radius: 50%;
+width: 8.3vw;
+  height: 8.3vw;
+  -webkit-animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin{
+  0%{ -webkit-transform: rotate(0deg);}
+  100%{ -webkit-transform: rotate(360deg);}
+}</textarea>
+         </div>
+
+
+
+
+
+
+         <div id="t3" class="fortext">
+           <span class="close">&times;</span>
+           <h1>Add HTML</h1>
+          <textarea name="name" rows="6" cols="50" readonly><div class="shape">
+<span class="sq1"></span>
+<span class="sq2"></span>
+<span class="sq3"></span>
+<span class="sq4"></span>
+</div></textarea>
+          <h1>Add CSS</h1>
+   <textarea name="name"  rows="25" cols="50" readonly>
+     .shape{
+       height: 80px;
+       width: 80px;
+        position: absolute;
+        -webkit-animation: u1 1.3s ease-in-out infinite;
+        transform: rotate(45deg);
+      }
+      .shape span{
+        display: block;
+        position: absolute;
+        height: 40px;
+       width: 40px;
+       border: 1px solid #000000;
+       -webkit-animation: rotate 1.3s linear infinite;
+      }
+      .sq1{
+       top: 0;
+       left: 0;
+       background-color: #eb2a5d;
+
+      }
+      .sq2{
+        top: 0;
+        right: 0;
+       background-color: #4ba54d;
+
+      }
+      .sq3{
+       background-color: #5bd1d7;
+       bottom: 0;
+       left: 0;
+      }
+      .sq4{
+        bottom: 0;
+        right: 0;
+       background-color: #ffe75e;
+
+      }
+      @-webkit-keyframes rotate{
+        0%,10%{transform: rotate(0deg);}
+        65%{ transform: rotate(-55deg);}
+      }</textarea>
+            </div>
+
+
+            <div id="t4" class="fortext">
+              <span class="close">&times;</span>
+              <h1>Add HTML</h1>
+<textarea name="name" rows="5" cols="50" readonly>
+  <span class="up-load">LOADING
+    <span class="f1">.</span>
+    <span class="f2">. </span>
+    <span class="f3">. </span>
+  </span>
+   <div class="line">
+     <div class="linel">
+      </div>
+   </div></textarea>
+             <h1>Add CSS</h1>
+<textarea name="name"  rows="13" cols="50" readonly>
+
+  .line{
+    height: 40px;
+    width: 21.35vw;
+    background-color: #3f3f44;
+    border: 1px solid white;
+    border-radius: 20px;
+  }
+  .linel{
+    height: 36px;
+    width: 0px;
+    background-color: #54e346;
+    border-radius: 20px;
+    margin: 2px;
+  }
+  .up-load{
+    position: absolute;
+    transform: translateY(-35px);
+    color: white;
+  }
+  .f1, .f2, .f3{
+    visibility: hidden;
+  }
+  .color{
+    color: black;
+  }
+  .appear{
+    visibility: visible;
+  }</textarea>
+  <h1>Add JavaScript</h1>
+<textarea name="name"  rows="13" cols="50" readonly>
+
+  setInterval(pro,1000);
+
+
+     function pro(){
+     document.querySelector('.f1').classList.toggle('appear');
+     document.querySelector('.f2').classList.toggle('appear');
+     document.querySelector('.f3').classList.toggle('appear');
+      document.querySelector('.linel').style.width=progress + 'vw';
+        progress+=3.01;
+      if(progress>21.2){
+        progress=0;
+      }
+     }</textarea>
+               </div>
+
+
+
+               <div id="t5" class="fortext">
+                 <span class="close">&times;</span>
+                 <h1>Add HTML</h1>
+<textarea name="name" rows="7" cols="50" readonly>
+  <div class="bar bar1">
+  </div>
+  <div class="bar bar2">
+  </div>
+  <div class="bar bar3">
+  </div>
+  <div class="bar bar4">
+  </div>
+  <div class="bar bar5">
+  </div>
+  <div class="bar bar6">
+  </div>
+</textarea>
+                <h1>Add CSS</h1>
+<textarea name="name"  rows="25" cols="50" readonly>
+  .items .bar{
+    width: 20px;
+    height:10px;
+    margin: 1px;
+  }
+  .bar1{
+    background-color: #c70039;
+  -webkit-animation: delay 1.4s infinite ease-in-out;
+  }
+  .bar2{
+    background-color: #0e49b5;
+    -webkit-animation: delay1 1.4s infinite ease-in-out;
+  }
+  .bar3{
+    background-color: #f37121;
+  -webkit-animation: delay2 1.4s infinite ease-in-out;
+  }
+  .bar4{
+    background-color: #54e346;
+  -webkit-animation: delay3 1.4s infinite ease-in-out;
+  }
+  .bar5{
+    background-color: #fff76a;
+  -webkit-animation: delay4 1.4s infinite ease-in-out;
+  }
+  .bar6{
+    background-color: #ffffff;
+    -webkit-animation: delay5 1.4s infinite ease-in-out;
+  }@-webkit-keyframes delay{
+    0%,40%,100% { -webkit-transform: scaleY(1) }
+    20% { -webkit-transform: scaleY(10) }
+  }
+  @-webkit-keyframes delay1{
+    0%,50%,100% { -webkit-transform: scaleY(1) }
+    30% { -webkit-transform: scaleY(10) }
+  }
+  @-webkit-keyframes delay2{
+    0%,60%,100% { -webkit-transform: scaleY(1) }
+    40% { -webkit-transform: scaleY(10) }
+  }
+  @-webkit-keyframes delay3{
+    0%,70%,100% { -webkit-transform: scaleY(1) }
+    50% { -webkit-transform: scaleY(10) }
+  }
+  @-webkit-keyframes delay4{
+    0%,80%,100% { -webkit-transform: scaleY(1) }
+    60% { -webkit-transform: scaleY(10) }
+  }
+  @-webkit-keyframes delay5{
+    0%,90%,100% { -webkit-transform: scaleY(1) }
+    70% { -webkit-transform: scaleY(10) }
+  }
+  </textarea>
+                  </div>
+
+
+                  <div id="t6" class="fortext">
+                    <span class="close">&times;</span>
+                    <h1>Add HTML</h1>
+<textarea name="name" rows="4" cols="50" readonly>
+  <div class="rectangleBlock">
+    <span class="bigCircle"></span>
+  </div></textarea>
+                   <h1>Add CSS</h1>
+<textarea name="name"  rows="25" cols="50" readonly>
+  .rectangleBlock{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+  }
+  .bigCircle{
+    border: 7px solid #999b84;
+    border-radius: 50%;
+    -webkit-animation: smallbig 2.5s linear infinite;
+  }
+  @-webkit-keyframes smallbig{
+    0%, 100%{-webkit-transform: scale(1,1) translateX(0px);}
+    25%, 75%{-webkit-transform: scale(2,2) translateX(25px);}
+    50%{-webkit-transform: scale(3.4,3.4) translateX(50px);}
+  }
+</textarea>
+                     </div>
+
+<div id="t7" class="fortext">
+<span class="close">&times;</span>
+<h1>Add HTML</h1>
+<textarea name="name" rows="4" cols="50" readonly>
+  <span class="circleStick"></span>
+   <span class="circleStick  cs1"></span>
+   <span class="circleStick cs2"></span>
+   <span class="circleStick cs3"></span>
+   <span class="circleStick cs4"></span>
+   <span class="circleStick cs5"></span>
+   <span class="circleStick cs6"></span></textarea>
+                      <h1>Add CSS</h1>
+<textarea name="name"  rows="25" cols="50" readonly>
+  .circleStick{
+       border: 10px solid #0278ae;
+       border-radius: 50%;
+   position: absolute;
+  }
+  .cs1{
+    -webkit-animation: spin1 5s linear infinite;
+    border: 10px solid #51adcf;
+  }
+  .cs2{
+    -webkit-animation: spin2 5s linear infinite;
+    border: 10px solid #a5ecd7;
+  }
+  .cs3{
+    -webkit-animation: spin3 5s linear infinite;
+  border: 10px solid #dddddd;
+  }
+  .cs4{
+    -webkit-animation: spin4 5s linear infinite;
+    border: 10px solid #1f4068;
+  }
+  .cs5{
+    -webkit-animation: spin5 5s linear infinite;
+    border: 10px solid #162447;
+  }
+  .cs6{
+    -webkit-animation: spin6 5s linear infinite;
+    border: 10px solid #1b1b2f;
+
+  }
+  @-webkit-keyframes spin1{
+    0%,100%{ -webkit-transform: rotate(0deg) translateX(0px);}
+    25%{ -webkit-transform: rotate(120deg) translateX(20px);}
+  50%{ -webkit-transform: rotate(240deg) translateX(20px);}
+  75%{ -webkit-transform: rotate(360deg) translateX(20px);}
+  }
+  @-webkit-keyframes spin2{
+    0%,100%{ -webkit-transform: rotate(0deg) translateX(0px);}
+    25%{ -webkit-transform: rotate(120deg) translateX(40px);}
+  50%{ -webkit-transform: rotate(240deg) translateX(40px);}
+  75%{ -webkit-transform: rotate(360deg) translateX(40px);}
+  }
+  @-webkit-keyframes spin3{
+    0%,100%{ -webkit-transform: rotate(0deg) translateX(0px);}
+    25%{ -webkit-transform: rotate(120deg) translateX(60px);}
+  50%{ -webkit-transform: rotate(240deg) translateX(60px);}
+  75%{ -webkit-transform: rotate(360deg) translateX(60px);}
+  }
+  @-webkit-keyframes spin4{
+    0%,100%{ -webkit-transform: rotate(0deg) translateX(0px);}
+    25%{ -webkit-transform: rotate(-120deg) translateX(20px);}
+  50%{ -webkit-transform: rotate(-240deg) translateX(20px);}
+  75%{ -webkit-transform: rotate(-360deg) translateX(20px);}
+  }
+  @-webkit-keyframes spin5{
+    0%,100%{ -webkit-transform: rotate(0deg) translateX(0px);}
+    25%{ -webkit-transform: rotate(-120deg) translateX(40px);}
+  50%{ -webkit-transform: rotate(-240deg) translateX(40px);}
+  75%{ -webkit-transform: rotate(-360deg) translateX(40px);}
+  }
+  @-webkit-keyframes spin6{
+    0%,100%{ -webkit-transform: rotate(0deg) translateX(0px);}
+    25%{ -webkit-transform: rotate(-120deg) translateX(60px);}
+  50%{ -webkit-transform: rotate(-240deg) translateX(60px);}
+  75%{ -webkit-transform: rotate(-360deg) translateX(60px);}
+  } </textarea>
+                        </div>
+
+
+                        <div id="t8" class="fortext">
+                          <span class="close">&times;</span>
+                          <h1>Add HTML</h1>
+<textarea name="name" rows="7" cols="50" readonly>
+  <div class="lds-roller">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div></textarea>
+                         <h1>Add CSS</h1>
+<textarea name="name"  rows="25" cols="50" readonly>
+  .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff9642;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
+</textarea>
+                           </div>
+
+                           <div id="t9" class="fortext">
+                             <span class="close">&times;</span>
+                             <h1>Add HTML</h1>
+<textarea name="name" rows="4" cols="50" readonly>
+  <div class="dissCircle">
+      </div></textarea>
+<h1>Add CSS</h1>
+<textarea name="name"  rows="25" cols="50" readonly>
+  .dissCircle{
+    border: 50px solid rgb(4,217,255,1);
+    border-radius: 50%;
+
+    -webkit-animation: pulse 2s ease-in-out infinite;
+  }
+  @-webkit-keyframes pulse{
+    0%{ -webkit-transform: scale(0.8);
+      box-shadow: 0 0 0 0 rgb(4,217,255,0.7);
+    }
+    80%{ -webkit-transform: scale(1);
+      box-shadow: 0 0 0 50px rgb(4,217,255,0);
+    }
+    100%{-webkit-transform: scale(0.8);
+    }
+  }
+</textarea>
+                              </div>
+
+
+
+
+        <div class="items " id="1">
+            <span class="ball i b0"></span>
+            <span class="ball i b1"></span>
+            <span class="ball i b2"></span>
+            <span class="ball i b3"></span>
+         </div>
+
+
+
+
+
+     <div class="items " id="2">
+      <span class="circle"></span>
+     </div>
+
+     <div class="items " id="3">
+       <div class="shape">
+         <span class="sq1"></span>
+         <span class="sq2"></span>
+         <span class="sq3"></span>
+         <span class="sq4"></span>
+       </div>
+
+     </div>
+
+     <div class="items " id="4">
+      <span class="up-load">LOADING
+        <span class="f1">.</span>
+        <span class="f2">. </span>
+        <span class="f3">. </span>
+      </span>
+       <div class="line">
+         <div class="linel">
+          </div>
+       </div>
+     </div>
+
+     <div class="items " id="5">
+       <div class="bar bar1">
+       </div>
+       <div class="bar bar2">
+       </div>
+       <div class="bar bar3">
+       </div>
+       <div class="bar bar4">
+       </div>
+       <div class="bar bar5">
+       </div>
+       <div class="bar bar6">
+       </div>
+     </div>
+
+     <div class="items " id="6">
+     <div class="rectangleBlock">
+       <span class="bigCircle"></span>
+     </div>
+     </div>
+
+     <div class="items " id="7">
+       <span class="circleStick"></span>
+        <span class="circleStick  cs1"></span>
+        <span class="circleStick cs2"></span>
+        <span class="circleStick cs3"></span>
+        <span class="circleStick cs4"></span>
+        <span class="circleStick cs5"></span>
+        <span class="circleStick cs6"></span>
+     </div>
+     <div class="items " id="8">
+           <div class="lds-roller">
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+           </div>
+     </div>
+
+     <div class="items " id="9">
+       <div class="dissCircle">
+           </div>
+         </div>
+       </div>
+
+
+
+     <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+<button onclick="myFunction()">Copy text</button>
+<textarea id="myInput" name="w3review" rows="30" cols="70">fjjjjjvjjjjcmkkkcm,
+</textarea>
+  </div>
+
+
+  <br><br>
+
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+}
+</script>
+
+</body>
+</html> -->
